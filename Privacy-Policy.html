@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Privacy Policy - Calculator Hub</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 820px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            animation: fadeIn 0.6s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Header */
+        .header {
+            text-align: center;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+
+        .header h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #333333;
+            letter-spacing: -0.5px;
+        }
+
+        .header .badge {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-top: 8px;
+        }
+
+        .header .last-updated {
+            display: block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #888888;
+        }
+
+        /* Sections */
+        .section {
+            margin-bottom: 28px;
+        }
+
+        .section h2 {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333333;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h2 .icon {
+            font-size: 22px;
+        }
+
+        .section p {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555555;
+            margin-bottom: 10px;
+        }
+
+        .section ul {
+            padding-left: 24px;
+            margin: 12px 0 8px 0;
+        }
+
+        .section ul li {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #555555;
+            margin-bottom: 6px;
+        }
+
+        .section ul li strong {
+            color: #333333;
+        }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: #f8f9ff;
+            border-left: 4px solid #667eea;
+            padding: 16px 20px;
+            border-radius: 8px;
+            margin: 16px 0;
+        }
+
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 14px;
+        }
+
+        .highlight-box strong {
+            color: #333333;
+        }
+
+        /* Data Flow Diagram */
+        .data-flow {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 16px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .data-flow .step {
+            background: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+            color: #333333;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .data-flow .arrow {
+            font-size: 20px;
+            color: #667eea;
+            font-weight: 300;
+        }
+
+        .data-flow .device {
+            background: #667eea;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        /* Privacy Badges */
+        .badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 16px 0 8px 0;
+        }
+
+        .badges .badge-item {
+            background: #f0f0f0;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            color: #555555;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .badges .badge-item .check {
+            color: #4CAF50;
+            font-weight: bold;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: #fafafa;
+            border-radius: 12px;
+            padding: 20px;
+            margin-top: 8px;
+        }
+
+        .contact-box p {
+            margin-bottom: 4px;
+        }
+
+        .contact-box a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-box a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            border-top: 2px solid #f0f0f0;
+            padding-top: 20px;
+            margin-top: 8px;
+            font-size: 13px;
+            color: #aaaaaa;
+        }
+
+        .footer a {
+            color: #667eea;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px;
+            }
+
+            .header h1 {
+                font-size: 26px;
+            }
+
+            .section h2 {
+                font-size: 18px;
+            }
+
+            .data-flow {
+                flex-direction: column;
+                gap: 6px;
+            }
+
+            .data-flow .arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <!-- HEADER -->
+        <div class="header">
+            <h1>🔐 Privacy Policy</h1>
+            <span class="badge">Calculator Hub</span>
+            <span class="last-updated">Last Updated: June 16, 2026</span>
+        </div>
+
+        <!-- INTRODUCTION -->
+        <div class="section">
+            <h2><span class="icon">📋</span> Introduction</h2>
+            <p>
+                Calculator Hub ("we", "our", or "us") is committed to protecting your privacy.
+                This privacy policy explains how our mobile application ("the App") handles your data
+                when you use our Percentage Calculator and Date Calculator features.
+            </p>
+            <p>
+                <strong>We believe in transparency.</strong> This policy clearly outlines what data
+                we collect, how we use it, and most importantly — what we <strong>do not</strong> do with it.
+            </p>
+        </div>
+
+        <!-- DATA COLLECTION -->
+        <div class="section">
+            <h2><span class="icon">📊</span> What Data We Collect</h2>
+            <p>
+                Our app collects data <strong>only for the purpose of performing calculations</strong>.
+                The data we process includes:
+            </p>
+            <ul>
+                <li><strong>Percentage Calculator:</strong> Numerical values you enter (e.g., percentage value, base number, part/whole values)</li>
+                <li><strong>Date Calculator:</strong> Dates you select (start date, end date, and your preference to include/exclude the end day)</li>
+            </ul>
+            <p>
+                <strong>We do not collect:</strong>
+            </p>
+            <ul>
+                <li>Personal identification information (name, email, phone number, address)</li>
+                <li>Device information (IMEI, MAC address, serial numbers)</li>
+                <li>Location data</li>
+                <li>Contacts, photos, or files</li>
+                <li>Usage analytics or crash reports (unless explicitly permitted)</li>
+            </ul>
+        </div>
+
+        <!-- HOW DATA IS USED -->
+        <div class="section">
+            <h2><span class="icon">⚙️</span> How We Use Your Data</h2>
+            <p>
+                The data you enter is used <strong>exclusively</strong> to:
+            </p>
+            <ul>
+                <li>Perform the requested mathematical or date calculations</li>
+                <li>Display the calculated results to you in real-time</li>
+            </ul>
+            <p>
+                <strong>We do not:</strong>
+            </p>
+            <ul>
+                <li>Analyze, mine, or profile your data</li>
+                <li>Use your data for advertising or marketing purposes</li>
+                <li>Share your data with any third parties</li>
+            </ul>
+        </div>
+
+        <!-- DATA STORAGE -->
+        <div class="section">
+            <h2><span class="icon">💾</span> Where Your Data Is Stored</h2>
+
+            <div class="highlight-box">
+                <p>
+                    <strong>✅ All data is stored locally on your device.</strong>
+                    Your data never leaves your phone, tablet, or other device.
+                </p>
+            </div>
+
+            <p>
+                The app does not have any servers, cloud storage, or external databases.
+                All calculations are performed <strong>entirely on your device</strong> using
+                the app's built-in logic.
+            </p>
+
+            <!-- Data Flow Diagram -->
+            <div class="data-flow">
+                <span class="step">📱 Your Input</span>
+                <span class="arrow">➜</span>
+                <span class="step">⚡ Local Calculation</span>
+                <span class="arrow">➜</span>
+                <span class="device">📲 Your Device Only</span>
+                <span class="arrow">➜</span>
+                <span class="step">📊 Result Displayed</span>
+            </div>
+
+            <ul>
+                <li><strong>No data is saved</strong> — your inputs and results are not stored or cached after you leave the screen</li>
+                <li><strong>No data is transmitted</strong> — no network requests are made for calculations</li>
+                <li><strong>No data is backed up</strong> — your calculations are not backed up to Google Drive, iCloud, or any cloud service</li>
+            </ul>
+        </div>
+
+        <!-- DATA SHARING -->
+        <div class="section">
+            <h2><span class="icon">🚫</span> Data Sharing</h2>
+            <p>
+                <strong>We do not share your data with anyone.</strong>
+            </p>
+            <ul>
+                <li>❌ No third-party analytics services</li>
+                <li>❌ No advertising networks</li>
+                <li>❌ No social media platforms</li>
+                <li>❌ No cloud storage providers</li>
+                <li>❌ No government or law enforcement agencies (unless required by law)</li>
+            </ul>
+            <p>
+                Since all data stays on your device, there is <strong>nothing to share</strong>.
+                Your privacy is completely protected.
+            </p>
+        </div>
+
+        <!-- PERMISSIONS -->
+        <div class="section">
+            <h2><span class="icon">🔑</span> App Permissions</h2>
+            <p>
+                Calculator Hub requires <strong>no special permissions</strong> to function.
+                The app does not request access to:
+            </p>
+            <ul>
+                <li>Internet</li>
+                <li>Storage</li>
+                <li>Camera</li>
+                <li>Microphone</li>
+                <li>Contacts</li>
+                <li>Location</li>
+            </ul>
+            <p>
+                This is intentional — we designed the app to be <strong>completely self-contained</strong>
+                and privacy-first.
+            </p>
+        </div>
+
+        <!-- CHILDREN'S PRIVACY -->
+        <div class="section">
+            <h2><span class="icon">👶</span> Children's Privacy</h2>
+            <p>
+                Our app does not collect any personal information from anyone, including
+                children under the age of 13. Since we do not collect data, there is no
+                risk of inadvertently collecting data from minors.
+            </p>
+        </div>
+
+        <!-- SECURITY -->
+        <div class="section">
+            <h2><span class="icon">🛡️</span> Security</h2>
+            <p>
+                While we don't collect or transmit data, we still take security seriously:
+            </p>
+            <ul>
+                <li><strong>No network access</strong> — eliminates remote attack vectors</li>
+                <li><strong>No data persistence</strong> — no files are written to storage</li>
+                <li><strong>Minimal codebase</strong> — less complexity means fewer vulnerabilities</li>
+                <li><strong>Android best practices</strong> — we follow Google's security guidelines for app development</li>
+            </ul>
+        </div>
+
+        <!-- PRIVACY BADGES -->
+        <div class="section">
+            <h2><span class="icon">✅</span> Our Privacy Commitment</h2>
+            <div class="badges">
+                <span class="badge-item"><span class="check">✓</span> Zero Data Collection</span>
+                <span class="badge-item"><span class="check">✓</span> Local Processing Only</span>
+                <span class="badge-item"><span class="check">✓</span> No Third-Party Sharing</span>
+                <span class="badge-item"><span class="check">✓</span> No Cloud Storage</span>
+                <span class="badge-item"><span class="check">✓</span> No Internet Required</span>
+                <span class="badge-item"><span class="check">✓</span> No Permissions Needed</span>
+            </div>
+        </div>
+
+        <!-- CHANGES -->
+        <div class="section">
+            <h2><span class="icon">📝</span> Changes to This Policy</h2>
+            <p>
+                We may update this privacy policy from time to time. When we do, we will
+                update the "Last Updated" date at the top of this page. We encourage you
+                to review this policy periodically to stay informed about how we protect
+                your privacy.
+            </p>
+            <p>
+                <strong>Note:</strong> Since we don't collect user data, any changes to this
+                policy will not affect your privacy — they will only clarify our existing
+                commitment to data protection.
+            </p>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="section">
+            <h2><span class="icon">📧</span> Contact Us</h2>
+            <div class="contact-box">
+                <p>
+                    If you have any questions, concerns, or feedback about this privacy policy,
+                    please reach out to us:
+                </p>
+                <p style="margin-top: 8px;">
+                    📧 <a href="mailto:privacy@calculatorhub.com">privacy@calculatorhub.com</a>
+                </p>
+                <p style="font-size: 14px; color: #888888; margin-top: 4px;">
+                    We typically respond within 2-3 business days.
+                </p>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="footer">
+            &copy; 2026 Calculator Hub &bull;
+            Built with ❤️ &bull;
+            <a href="#">Privacy Policy</a> &bull;
+            <a href="#">Terms of Use</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
